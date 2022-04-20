@@ -1,5 +1,5 @@
 # webgame
 
-### This game is working [https://jeweled-lopsided-notify.glitch.me]
+### This game is working [http://playpong.excv4.net]
 
 ### Now is Editing!!!
