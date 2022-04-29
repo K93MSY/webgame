@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  
+  <!--STYLESHEET-->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-
+  
+  <!--JAVASCRIPT LIBRARY-->
     <script type="text/javascript" src="./lib/pixi.min.js"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
@@ -14,6 +21,23 @@
 </head>
 <body>
 <div id="app"></div>
+  <div class="instr">
+  <h1>How to Play?</h1><br>
+  <a> Press A key : Control Bar Move Left.</a><br>
+  <a> Press D key : Control Bar Move Right.</a><br><br><br>
+    <h2>ATTENTION!!!</h2><br>
+    <a> Mobiles are not suppport!</a><br>
+    <a> Please Play With PC!</a>
+  </div>
+  <div class="game-op">
+      <button class="startbtn" id="startbtn" onclick="startgame();">Game Start!</button><br>
+      <a>Select difficulty</a>
+                  <select name="gameoption">
+                    <option value="easy" selected>EASY</option>
+                    <option value="normal" selected>NORMAL</option>
+                    <option value="hard" selected>HARD</option>
+                </select>
+  </div>
 </body>
 <script type="text/javascript" src="./js/play.js"></script>
 </html>
