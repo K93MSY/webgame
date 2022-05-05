@@ -1,3 +1,4 @@
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 let app = new PIXI.Application({
     width:400,
     height:600,
@@ -21,6 +22,23 @@ let app = new PIXI.Application({
     let mX = 70;
     let gamestart = false;
     
+    
+      /*if(e.key === ' ' || e.key === '　'){
+          if (gamestart == false){
+              gamestart = true;
+          }
+        }*/
+//   function startgame() {
+  /*      pong.x = pong.x + 10
+    }*/
+
+    /*
+    const gameoption = document.gameoption;
+    const num = gameoption.selectedIndex;
+    const str = gameoption.options[num].value;
+    */
+
+
     document.addEventListener('keypress', keypress_ivent);
     
     function keypress_ivent(e) {
@@ -41,29 +59,30 @@ let app = new PIXI.Application({
         }*/
       return false;
     }
- //   function startgame() {
-  /*      pong.x = pong.x + 10
-    }*/
 
-    /*
-    const gameoption = document.gameoption;
-    const num = gameoption.selectedIndex;
-    const str = gameoption.options[num].value;
-    */
-    
+
+    var gamep = false;
+
     function startgame() {
-        for (var i=0; i<Infinity; i++) {
-            pong.x = pong.x + 10
-        }
+      gamep = true;
     }
-
+    
     let pong = new PIXI.Graphics()
     .beginFill(0xffffff,1)
     .drawCircle(8, 8, 8)
     pong.x = 180;
     pong.y = 290;
+    if(gamep=true){
+      let i = 1;
+      while (i > 0) {
+        async function hoge() {
+          await sleep(5000);
+          pong.x = pong.x + 10
+        }
+      }
+    }
     app.stage.addChild(pong)
-    
+
     
     let bar = new PIXI.Graphics()
     .beginFill(0xffffff,1)
