@@ -61,26 +61,11 @@ let app = new PIXI.Application({
     }
 
 
-    var gamep = false;
-
-    function startgame() {
-      gamep = true;
-    }
-    
     let pong = new PIXI.Graphics()
     .beginFill(0xffffff,1)
     .drawCircle(8, 8, 8)
     pong.x = 180;
     pong.y = 290;
-    if(gamep=true){
-      let i = 1;
-      while (i > 0) {
-        async function hoge() {
-          await sleep(5000);
-          pong.x = pong.x + 10
-        }
-      }
-    }
     app.stage.addChild(pong)
 
     
@@ -100,5 +85,7 @@ let app = new PIXI.Application({
     cpubar.y = -460;
     app.stage.addChild(cpubar)
     
+    app.ticker.add(delta=>{pong.x=pong.x+1;});
+
     let up = document.getElementById('app');
     up.appendChild(app.view);
